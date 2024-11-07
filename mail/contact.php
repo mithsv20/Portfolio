@@ -15,6 +15,8 @@ $body = "You have received a new message from your website contact form.\n\n"."H
 $header = "From: $email";
 $header .= "Reply-To: $email";	
 
-if(!mail($to, $subject, $body, $header))
+if(!mail($to, $subject, $body, $header)){
   http_response_code(500);
+
+}
 ?>
